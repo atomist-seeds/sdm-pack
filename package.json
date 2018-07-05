@@ -1,0 +1,78 @@
+{
+  "name": "@atomist/sdm-pack-seed",
+  "version": "0.1.0",
+  "description": "A starting point for an enhancement pack for an Atomist software delivery machine",
+  "author": "Jessica Kerr",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/atomist/sdm-pack-seed#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atomist/sdm-pack-seed.git"
+  },
+  "keywords": [
+    "atomist",
+    "automation",
+    "sdm",
+    "extension",
+    "pack",
+    "spring"
+  ],
+  "bugs": {
+    "url": "https://github.com/atomist/sdm-pack-seed/issues"
+  },
+  "dependencies": {
+    "@atomist/antlr": "^0.3.0",
+    "properties-reader": "0.0.16"
+  },
+  "peerDependencies": {
+    "@atomist/automation-client": "0.17.3",
+    "@atomist/sdm": "^0.3.0",
+    "@atomist/sdm-core": "^0.3.1"
+  },
+  "devDependencies": {
+    "@atomist/automation-client": "0.18.0-20180704102519",
+    "@atomist/sdm": "0.3.1-20180704121313",
+    "@atomist/sdm-core": "0.3.2-20180704113629",
+    "@types/lodash": "^4.14.109",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^9.4.1",
+    "fast-xml-parser": "^3.11.1",
+    "mocha": "^5.2.0",
+    "npm-run-all": "^4.1.2",
+    "power-assert": "^1.4.4",
+    "rimraf": "^2.6.2",
+    "supervisor": "^0.12.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.9.1",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.9.2",
+    "typescript-formatter": "^7.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm-run-all lint compile test",
+    "clean": "npm-run-all clean:js clean:build",
+    "clean:benchmark": "rimraf isolate-*-v8.log",
+    "clean:build": "rimraf *-v8.log profile.txt dist",
+    "clean:dist": "npm-run-all clean clean:npm",
+    "clean:js": "rimraf \"{src,test}/**/*.js\"",
+    "clean:npm": "rimraf node_modules",
+    "compile": "npm-run-all compile:ts",
+    "compile:ts": "tsc --project .",
+    "fmt": "tsfmt --replace",
+    "lint": "tslint --format verbose --project . --exclude \"{build,node_modules}/**\" \"**/*.ts\"",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha --require ts-node/register --exit \"test/**/*.ts\"",
+    "test:one": "mocha --require ts-node/register \"test/**/${TEST:-*.ts}\"",
+    "typedoc": "typedoc --mode modules --excludeExternals --out build/typedoc src",
+    "watch:compile": "tsc --project . --watch",
+    "watch": "supervisor --watch build --quiet --exec npm -- run start"
+  },
+  "main": "dist/index.js",
+  "engines": {
+    "node": "9.x.x",
+    "npm": "6.x.x"
+  }
+}
