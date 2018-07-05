@@ -1,6 +1,6 @@
-# @atomist/sdm-pack-spring
+# @atomist/sdm-pack-seed
 
-This page details all runtime OSS dependencies of `@atomist/sdm-pack-spring`.
+This page details all runtime OSS dependencies of `@atomist/sdm-pack-seed`.
 
 ## Licenses
 
@@ -18,7 +18,7 @@ Apache License 2.0 - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apa
 
 | Name | Version | Publisher | Repository |
 |------|---------|-----------|------------|
-|`@atomist/sdm-pack-spring`|`0.1.7`|Atomist, Inc.|[https://github.com/atomist/sdm-pack-spring](https://github.com/atomist/sdm-pack-spring)|
+|`@atomist/sdm-pack-seed`|`0.1.0`|Jessica Kerr|[https://github.com/atomist/sdm-pack-seed](https://github.com/atomist/sdm-pack-seed)|
 
 #### BSD-3-Clause
 BSD 3-Clause "New" or "Revised" License - [http://www.opensource.org/licenses/BSD-3-Clause](http://www.opensource.org/licenses/BSD-3-Clause)
