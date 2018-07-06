@@ -14,61 +14,12 @@
  * limitations under the License.
  */
 
-import { GitHubRepoRef } from "@atomist/automation-client/operations/common/GitHubRepoRef";
-import {
-    ExtensionPack, GeneratorRegistration,
-    LocalDeploymentGoal, SoftwareDeliveryMachine,
-} from "@atomist/sdm";
-import {
-    LocalEndpointGoal,
-    LocalUndeploymentGoal,
-} from "@atomist/sdm-core";
-import { ManagedDeploymentTargeter } from "@atomist/sdm-core";
-import { tagRepo } from "@atomist/sdm-core";
-import * as deploy from "@atomist/sdm/api-helper/dsl/deployDsl";
+import { ExtensionPack } from "@atomist/sdm";
 import { metadata } from "@atomist/sdm/api-helper/misc/extensionPack";
-import { CommonJavaGeneratorConfig } from "./support/java/generate/generatorConfig";
-import { ListLocalDeploys } from "./support/maven/deploy/listLocalDeploys";
-import { IsMaven } from "./support/maven/pushTests";
-import { mavenSourceDeployer } from "./support/spring/deploy/localSpringBootDeployers";
-import { springBootGenerator } from "./support/spring/generate/springBootGenerator";
-import { SpringProjectCreationParameters } from "./support/spring/generate/SpringProjectCreationParameters";
-import { springBootTagger } from "./support/spring/springTagger";
-import { TryToUpgradeSpringBootVersion } from "./support/spring/transform/tryToUpgradeSpringBootVersion";
 
 export const SeedSupport: ExtensionPack = {
     ...metadata(),
     configure: sdm => {
-
+        return sdm;
     },
 };
-
-export function configureLocalSpringBootDeploy(sdm: SoftwareDeliveryMachine) {
-    sdm.addDeployRules(
-        deploy.when(IsMaven)
-            .itMeans("Maven local deploy")
-            .deployTo(LocalDeploymentGoal, LocalEndpointGoal, LocalUndeploymentGoal)
-            .using(
-                {
-                    deployer: mavenSourceDeployer(sdm.configuration.sdm.projectLoader),
-                    targeter: ManagedDeploymentTargeter,
-                },
-            ))
-        .addCommand(ListLocalDeploys);
-}
-
-export const springRestGenerator: GeneratorRegistration<SpringProjectCreationParameters> =
-    springBootGenerator({
-        ...CommonJavaGeneratorConfig,
-        seed: () => new GitHubRepoRef("spring-team", "spring-rest-seed"),
-    }, {
-        intent: "create spring",
-    });
-
-export const kotlinRestGenerator: GeneratorRegistration<SpringProjectCreationParameters> =
-    springBootGenerator({
-        ...CommonJavaGeneratorConfig,
-        seed: () => new GitHubRepoRef("johnsonr", "flux-flix-service"),
-    }, {
-        intent: "create spring kotlin",
-    });
