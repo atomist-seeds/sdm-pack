@@ -1,20 +1,16 @@
 {
   "compilerOptions": {
     "newLine": "LF",
-    "target": "ES6",
+    "target": "ES2017",
     "module": "CommonJS",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "jsx": "React",
     "declaration": true,
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "build",
     "lib": [
-      "DOM",
-      "ES2017",
-      "DOM.Iterable",
-      "ScriptHost",
-      "esnext.asynciterable"
+      "DOM"
     ],
     "strict": true,
     "noImplicitAny": false,

@@ -36,14 +36,10 @@ import { SpringProjectCreationParameters } from "./support/spring/generate/Sprin
 import { springBootTagger } from "./support/spring/springTagger";
 import { TryToUpgradeSpringBootVersion } from "./support/spring/transform/tryToUpgradeSpringBootVersion";
 
-export const SpringSupport: ExtensionPack = {
+export const SeedSupport: ExtensionPack = {
     ...metadata(),
     configure: sdm => {
-        sdm
-            .addCodeTransformCommand(TryToUpgradeSpringBootVersion)
-            .addNewRepoWithCodeAction(
-                tagRepo(springBootTagger),
-            );
+
     },
 };
 
