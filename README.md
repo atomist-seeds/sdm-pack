@@ -1,6 +1,6 @@
 # sdm-pack-seed
 
-A starting point for an enhancement pack for an Atomist software delivery machine
+A starting point for an extension pack for an Atomist software delivery machine
 
 Extension Pack for an Atomist SDM to automate delivery of Spring and Spring Boot applications.
 
