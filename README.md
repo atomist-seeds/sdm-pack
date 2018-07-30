@@ -1,4 +1,4 @@
-# sdm-pack-seed
+# @atomist/sdm-pack-seed
 
 A starting point for an extension pack for an Atomist software delivery machine
 
