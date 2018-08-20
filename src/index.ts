@@ -1,1 +1,0 @@
-export { SeedSupport } from "./seed";
