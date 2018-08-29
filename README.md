@@ -1,5 +1,6 @@
 # @atomist/sdm-pack-seed
 
+[![atomist sdm goals](http://badge.atomist.com/T29E48P34/atomist/sdm-pack-seed/941f2d70-35f6-4e31-91c0-f0f6c8390629)](https://app.atomist.com/workspace/T29E48P34)
 [![npm version](https://badge.fury.io/js/%40atomist%2Fsdm-pack-seed.svg)](https://badge.fury.io/js/%40atomist%2Fsdm-pack-seed)
 
 A starting point for an extension pack for an [Atomist][atomist]
