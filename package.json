@@ -1,6 +1,6 @@
 {
   "name": "@atomist/sdm-pack-seed",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A starting point for an enhancement pack for an Atomist software delivery machine",
   "author": "Atomist, Inc.",
   "license": "Apache-2.0",
