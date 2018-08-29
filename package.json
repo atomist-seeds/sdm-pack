@@ -2,7 +2,11 @@
   "name": "@atomist/sdm-pack-seed",
   "version": "1.0.0",
   "description": "A starting point for an enhancement pack for an Atomist software delivery machine",
-  "author": "Atomist, Inc.",
+  "author": {
+    "name": "Atomist",
+    "email": "support@atomist.com",
+    "url": "https://atomist.com/"
+  },
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
