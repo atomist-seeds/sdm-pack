@@ -1,8 +1,4 @@
-# DEPRECATED
-
-See [atomist-seeds/sdm-pack](https://github.com/atomist-seeds/sdm-pack).
-
-# @atomist/sdm-pack-seed
+# @atomist-seeds/sdm-pack
 
 [![atomist sdm goals](http://badge.atomist.com/T29E48P34/atomist/sdm-pack-seed/941f2d70-35f6-4e31-91c0-f0f6c8390629)](https://app.atomist.com/workspace/T29E48P34)
 [![npm version](https://img.shields.io/npm/v/@atomist/sdm-pack-seed.svg)](https://www.npmjs.com/package/@atomist/sdm-pack-seed)
