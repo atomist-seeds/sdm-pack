@@ -1,47 +1,58 @@
+<p align="center">
+  <img src="https://images.atomist.com/sdm/SDM-Logo-Dark.png">
+</p>
+
 # @atomist-seeds/sdm-pack
 
-[![atomist sdm goals](http://badge.atomist.com/T29E48P34/atomist/sdm-pack-seed/941f2d70-35f6-4e31-91c0-f0f6c8390629)](https://app.atomist.com/workspace/T29E48P34)
-[![npm version](https://img.shields.io/npm/v/@atomist/sdm-pack-seed.svg)](https://www.npmjs.com/package/@atomist/sdm-pack-seed)
+[![atomist sdm goals](http://badge.atomist.com/T29E48P34/atomist-seeds/sdm-pack/24939d09-fe00-4a7a-8d52-0fc4c9672100)](https://app.atomist.com/workspace/T29E48P34)
+[![npm version](https://img.shields.io/npm/v/@atomist-seeds/sdm-pack.svg)](https://www.npmjs.com/package/@atomist-seeds/sdm-pack)
 
 A starting point for an extension pack for an [Atomist][atomist]
 software delivery machine (SDM).
 
-See the [Atomist documentation][atomist-doc] for more information on
-what SDMs are and what they can do for you using the Atomist API for
-software.
+Software delivery machines enable you to control your delivery process
+in code.  Think of it as an API for your software delivery.  See the
+[Atomist documentation][atomist-doc] for more information on the
+concept of a software delivery machine and how to create and develop
+an SDM.
 
 [atomist-doc]: https://docs.atomist.com/ (Atomist Documentation)
 
-## Usage
+## Getting started
 
-Install the dependency in your SDM project.
+See the [Developer Quick Start][atomist-quick] to jump straight to
+creating an SDM.
 
-```
-$ npm install @atomist/sdm-pack-seed
-```
+[atomist-quick]: https://docs.atomist.com/quick-start/ (Atomist - Developer Quick Start)
 
-Then use its exported method to add the functionality to your SDM in
-your machine definition.
+## Contributing
 
-```typescript
-import {
-    SoftwareDeliveryMachine,
-    SoftwareDeliveryMachineConfiguration,
-} from "@atomist/sdm";
-import {
-    createSoftwareDeliveryMachine,
-} from "@atomist/sdm-core";
-import { SeedSupport } from "@atomist/sdm-pack-seed";
+Contributions to this project from community members are encouraged
+and appreciated. Please review the [Contributing
+Guidelines](CONTRIBUTING.md) for more information. Also see the
+[Development](#development) section in this document.
 
-export function machine(configuration: SoftwareDeliveryMachineConfiguration): SoftwareDeliveryMachine {
-    const sdm = createSoftwareDeliveryMachine({
-        name: "My Software Delivery Machine",
-        configuration,
-    });
-    sdm.addExtensionPacks(SeedSupport);
-    return sdm;
-};
-```
+## Code of conduct
+
+This project is governed by the [Code of
+Conduct](CODE_OF_CONDUCT.md). You are expected to act in accordance
+with this code by participating. Please report any unacceptable
+behavior to code-of-conduct@atomist.com.
+
+## Documentation
+
+Please see [docs.atomist.com][atomist-doc] for
+[developer][atomist-doc-sdm] documentation.
+
+[atomist-doc-sdm]: https://docs.atomist.com/developer/sdm/ (Atomist Documentation - SDM Developer)
+
+## Connect
+
+Follow [@atomist][atomist-twitter] and [The Composition][atomist-blog]
+blog related to SDM.
+
+[atomist-twitter]: https://twitter.com/atomist (Atomist on Twitter)
+[atomist-blog]: https://the-composition.com/ (The Composition - The Official Atomist Blog)
 
 ## Support
 
@@ -50,7 +61,7 @@ channel in the [Atomist community Slack workspace][slack].
 
 If you find a problem, please create an [issue][].
 
-[issue]: https://github.com/atomist/sdm-pack-seed/issues
+[issue]: https://github.com/atomist-seeds/sdm-pack/issues
 
 ## Development
 
