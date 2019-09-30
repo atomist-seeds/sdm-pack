@@ -6,19 +6,13 @@
     "moduleResolution": "Node",
     "jsx": "React",
     "declaration": true,
+    "declarationMap": true,
     "sourceMap": true,
-    "lib": [
-      "DOM",
-      "ES2017",
-      "DOM.Iterable",
-      "ScriptHost",
-      "esnext.asynciterable"
-    ],
+    "lib": ["DOM"],
     "strict": true,
-    "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
