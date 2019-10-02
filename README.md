@@ -48,11 +48,10 @@ Please see [docs.atomist.com][atomist-doc] for
 
 ## Connect
 
-Follow [@atomist][atomist-twitter] and [The Composition][atomist-blog]
-blog related to SDM.
+Follow [@atomist][atomist-twitter] and [the Atomist blog][atomist-blog].
 
 [atomist-twitter]: https://twitter.com/atomist (Atomist on Twitter)
-[atomist-blog]: https://the-composition.com/ (The Composition - The Official Atomist Blog)
+[atomist-blog]: https://blog.atomist.com/ (The Official Atomist Blog)
 
 ## Support
 
